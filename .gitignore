@@ -48,3 +48,11 @@ next-env.d.ts
 !/public/assets/thumbnails/.gitkeep
 /public/assets/lebrons/*
 !/public/assets/lebrons/.gitkeep
+
+# Media assets
+/assets/
+/public/assets/
+
+# Editor directories
+.idea
+.vscode
