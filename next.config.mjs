@@ -15,32 +15,31 @@ const nextConfig = {
   },
   // Add trailing slash for better static hosting compatibility
   trailingSlash: true,
-  // Optimize bundle size
-  swcMinify: true,
-  // Add custom headers for static hosting
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=3600, must-revalidate',
-          },
-        ],
-      },
-    ];
-  },
+  // Remove swcMinify as it's no longer necessary in Next.js 15.1.0
+  // swcMinify: true,
+  // Custom headers are not supported with static export; removing the headers function
+  // headers() {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       headers: [
+  //         {
+  //           key: 'Cache-Control',
+  //           value: 'public, max-age=31536000, immutable',
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       source: '/',
+  //       headers: [
+  //         {
+  //           key: 'Cache-Control',
+  //           value: 'public, max-age=3600, must-revalidate',
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 }
 
 export default nextConfig;
-
