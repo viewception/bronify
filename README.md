@@ -21,8 +21,8 @@ Lebronify is a music streaming app themed around LeBron James parody songs. This
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/your-username/lebronify.git
-cd lebronify
+git clone https://github.com/viewception/bronify.git
+cd bronify
 ```
 
 2. Install dependencies:
